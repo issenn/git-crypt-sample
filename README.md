@@ -28,7 +28,7 @@ secretdir/** filter=git-crypt diff=git-crypt
 .gitattributes !filter !diff
 
 $ echo "test" > secretdir/secretfile
-$ git-crypt status
+$ git-crypt status -e
 $ git rm -r --cached secretdir
 $ git add .gitattributes secretdir/secretfile
 $ git commit -m "Add: Add git-crypt init file"
